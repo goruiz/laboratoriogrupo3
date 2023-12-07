@@ -1,0 +1,15 @@
+# scheduler.yaml
+
+job:
+  name: hola-mundo-go
+  schedule: "*/5 * * * *"
+  description: "Ejecuta el programa Hola Mundo en Go cada 5 minutos."
+
+http_target:
+  uri: "https://[TU-FUNCION-CLOUD-FUNCTIONS].cloudfunctions.net/hola-mundo-go"
+  http_method: GET
+  headers:
+    Content-Type: "application/json"
+  body: ""
+
+timezone: "America/New_York"
